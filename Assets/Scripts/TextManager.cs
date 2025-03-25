@@ -15,7 +15,7 @@ public class TextManager : MonoBehaviour
     {
         Debug.Log("Starting convo with " + texting.name);
 
-        sentences.Clear();
+        sentences.Clear(); //Clears sentences 
 
         foreach (string sentence in texting.sentences);
         {
