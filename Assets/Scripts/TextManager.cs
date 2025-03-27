@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
+    public TextMesh textMesh;
     private Queue<string> sentences;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,9 +17,9 @@ public class TextManager : MonoBehaviour
     {
         Debug.Log("Starting convo with " + texting.name);
 
-        sentences.Clear(); //Clears sentences 
+        sentences.Clear(); //Clears sentences
 
-        foreach (string sentence in texting.sentences);
+        foreach (string sentence in texting.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -30,8 +32,15 @@ public class TextManager : MonoBehaviour
         if (sentences.Count == 0)
         {
             EndText();
+            return;
         }
+        string sentence = sentences.Dequeue();
     }
+
+     void Update() // reference to TextMeshPro
+     {
+
+     }
 
 
     void EndText()

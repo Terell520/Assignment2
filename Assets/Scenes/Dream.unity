@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   annamov: {fileID: 1133234865}
-  speed: 9
+  speed: 20
   talk: 0
   cam: {fileID: 1992768082}
   DaSmoothTime: 0.1
@@ -1203,9 +1203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text:
     sentences:
-    - 
-    - 
-    - 
+    - '"Huh? This is my DS i XL. My copy of Pokemon Black is inside of it'
+    - I remember the nights where I played throughout the school nights.
+    - ...And then Mother would get angry at me for sleeping in classSS
     name: Anna
 --- !u!1 &1570268548
 GameObject:
