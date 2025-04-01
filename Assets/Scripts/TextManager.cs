@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
-    public TextMesh Dialoguetext;
+    public TextMeshProUGUI Dialoguetext;
     private Queue<string> sentences;
     public float talk;
 
@@ -41,7 +42,7 @@ public class TextManager : MonoBehaviour
 
     }
 
-    private void Update()
+    private void Update() 
     {
         if (Input.GetKey(KeyCode.Return)) // checks if the Return (Enter) is pressed
         {
