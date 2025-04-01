@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class TextManager : MonoBehaviour
 {
-    public TextMesh textMesh;
+    public TextMesh Dialoguetext;
     private Queue<string> sentences;
+    public float talk;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,11 +37,22 @@ public class TextManager : MonoBehaviour
             return;
         }
         string sentence = sentences.Dequeue();
+        Dialoguetext.text = sentence; //Displays the text from TextMesh
+
     }
 
-     void Update() // reference to TextMeshPro
-     {
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Return)) // checks if the Return (Enter) is pressed
+        {
+            nextBox(); //When the check is completed, nextBox is triggered which means DisplayNextSentence is also triggered
+        }
+    }
 
+
+    void nextBox()
+     {
+        DisplayNextSentence(); //Advances to the next sentence
      }
 
 
